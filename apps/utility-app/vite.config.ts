@@ -14,6 +14,7 @@ export default defineConfig({
         './Input': './src/components/Input/Input.tsx',
         './Modal': './src/components/Modal/Modal.tsx',
         './Table': './src/components/Table/Table.tsx',
+        './Tabs': './src/components/Tabs/Tabs.tsx',
       },
       shared: ['react', 'react-dom'],
     }),

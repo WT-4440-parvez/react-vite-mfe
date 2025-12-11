@@ -27,3 +27,9 @@ declare module 'utilityApp/Table' {
   export const Table: React.FC<TableProps<any>>;
   export default Table;
 }
+
+declare module 'utilityApp/Tabs' {
+  import { TabsProps } from './shared-types';
+  export const Tabs: React.FC<TabsProps>;
+  export default Tabs;
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Card, Input, Modal, Table } from './components';
+import { Button, Card, Input, Modal, Table, Tabs } from './components';
 import { sampleUsers } from './data/tableData';
 import './App.css';
 
@@ -281,6 +281,17 @@ function App() {
             </div>
           </Card>
         </div>
+        <Card>
+          <div className="mt-6">
+            <Tabs
+              items={[
+                { key: 'overview', label: 'Overview', content: <div>Overview content goes here</div> },
+                { key: 'executions', label: 'Executions', content: <div>Executions table or chart</div> },
+                { key: 'settings', label: 'Settings', content: <div>Settings controls</div> },
+              ]}
+            />
+          </div>
+        </Card>
       </div>
 
       {/* Modals */}

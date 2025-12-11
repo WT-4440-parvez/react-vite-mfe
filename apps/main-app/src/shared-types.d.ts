@@ -55,3 +55,14 @@ export interface TableProps<T> {
   compact?: boolean;
   onRowClick?: (row: T) => void;
 }
+
+export interface TabItem {
+  key: string;
+  label: string;
+  content?: React.ReactNode;
+}
+
+export interface TabsProps {
+  items: TabItem[];
+  className?: string;
+}
