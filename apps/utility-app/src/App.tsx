@@ -35,6 +35,14 @@ function App() {
             >
               <div className="component-showcase">
                 <div>
+                  <p className='text-sgx-green-500 bg-sgx-blue-500'>🎨 Utility Components</p>
+                  <p className='text-shadow-sgx-green-500'>🎨 Utility Components</p>
+                  <div className="bg-sgx-bg-blue text-sgx-blue-500">
+                    Hello SGX
+                  </div>
+                  <div className="bg-sgx-blue-500 text-sgx-lightBlue-500">
+                    Hello SGX
+                  </div>
                   <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
                     Variants
                   </strong>
@@ -43,6 +51,7 @@ function App() {
                     <Button variant="secondary">Secondary</Button>
                     <Button variant="success">Success</Button>
                     <Button variant="danger">Danger</Button>
+                    <Button variant="primary">Primary</Button>
                   </div>
                 </div>
 
