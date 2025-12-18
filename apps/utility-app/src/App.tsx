@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Card, Input, Modal, Table, Tabs } from './components';
 import { sampleUsers } from './data/tableData';
 import './App.css';
+import { Chip, Button as HeroButton } from '@heroui/react';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,16 +36,8 @@ function App() {
             >
               <div className="component-showcase">
                 <div>
-                  <p className='text-sgx-green-500 bg-sgx-blue-500'>🎨 Utility Components</p>
-                  <p className='text-shadow-sgx-green-500'>🎨 Utility Components</p>
-                  <div className="bg-sgx-bg-blue text-sgx-blue-500">
-                    Hello SGX
-                  </div>
-                  <div className="bg-sgx-blue-500 text-sgx-lightBlue-500">
-                    Hello SGX
-                  </div>
                   <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
-                    Variants
+                    Native Variants
                   </strong>
                   <div className="variants-display">
                     <Button variant="primary">Primary</Button>
@@ -52,6 +45,28 @@ function App() {
                     <Button variant="success">Success</Button>
                     <Button variant="danger">Danger</Button>
                     <Button variant="primary">Primary</Button>
+                  </div>
+
+                   <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
+                    Native Variants
+                  </strong>
+                  <div className="variants-display">
+                    <HeroButton color="primary">Hero Button</HeroButton>
+                    <HeroButton color="secondary">Hero Button</HeroButton>
+                    <HeroButton color="success">Hero Button</HeroButton>
+                    <HeroButton color="danger">Hero Button</HeroButton>
+                  </div>
+
+                  <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
+                    Chip
+                  </strong>
+                  <div className="variants-display">
+                    <Chip color="default">Default</Chip>
+                    <Chip color="primary">Primary</Chip>
+                    <Chip color="secondary">Secondary</Chip>
+                    <Chip color="success">Success</Chip>
+                    <Chip color="warning">Warning</Chip>
+                    <Chip color="danger">Danger</Chip>
                   </div>
                 </div>
 
@@ -212,7 +227,7 @@ function App() {
 
                 <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '6px' }}>
                   <p style={{ color: '#555', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
-                    ✨ <strong>Features:</strong> Click outside to close, ESC key support, 
+                    ✨ <strong>Features:</strong> Click outside to close, ESC key support,
                     custom footers, smooth animations, and focus management.
                   </p>
                 </div>
@@ -272,9 +287,8 @@ function App() {
                     sortable: true,
                     filterable: true,
                     render: (val: string) => (
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${
-                        val === 'Active' ? 'bg-green-100 text-green-800' : val === 'Inactive' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
-                      }`}>
+                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${val === 'Active' ? 'bg-green-100 text-green-800' : val === 'Inactive' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
+                        }`}>
                         {val}
                       </span>
                     ),

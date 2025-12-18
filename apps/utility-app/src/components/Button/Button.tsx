@@ -20,10 +20,10 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantMap: Record<string, string> = {
-    primary: 'bg-blue-500 text-white hover:bg-blue-600 shadow-sm',
-    secondary: 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50',
-    danger: 'bg-red-500 text-white hover:bg-red-600 shadow-sm',
-    success: 'bg-emerald-500 text-white hover:bg-emerald-600 shadow-sm',
+    primary: 'bg-sgx-blue-500 text-white hover:bg-blue-600 shadow-sm',
+    secondary: 'bg-sgx-purple-500 text-sgx-white border border-slate-200 hover:bg-slate-50',
+    danger: 'bg-sgx-red-500 text-white hover:bg-red-600 shadow-sm',
+    success: 'bg-sgx-green-500 text-white hover:bg-green-600 shadow-sm',
   };
 
   const classes = [

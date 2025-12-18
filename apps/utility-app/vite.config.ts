@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
+import tsconfigPaths from "vite-tsconfig-paths";
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   plugins: [
     react(),
+    tsconfigPaths(),
+    tailwindcss(),
     federation({
       name: 'utility_app',
       filename: 'remoteEntry.js',
