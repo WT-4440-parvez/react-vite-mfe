@@ -33,3 +33,8 @@ declare module 'utilityApp/Tabs' {
   export const Tabs: React.FC<TabsProps>;
   export default Tabs;
 }
+
+declare module 'utilityApp/HeroButton' {
+  export const HeroButton: React.FC<HeroButtonProps>;
+  export default HeroButton;
+}

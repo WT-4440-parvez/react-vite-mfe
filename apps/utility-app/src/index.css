@@ -1,6 +1,6 @@
 @import "../../../theme.css";
 @import "tailwindcss";
- @config "../../../tailwind.config.mjs";
+@config "../../../tailwind.config.mjs";
 
 body {
   margin: 0;
