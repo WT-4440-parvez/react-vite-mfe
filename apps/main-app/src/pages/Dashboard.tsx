@@ -6,10 +6,10 @@ import { IndexItem, MetricCardProps } from '../types';
 
 const Dashboard: React.FC = () => {
   const indices: IndexItem[] = [
-    { name: 'iEdge APAC Financials Dividend Plus Index', time: '2 hours ago', status: 'Running', performance: '98.5%', health: 'healthy' },
-    { name: 'SGX S&P Asia 50 Index', time: '5 hours ago', status: 'Completed', performance: '99.2%', health: 'healthy' },
-    { name: 'SGX FTSE China A50 Index', time: '7 hours ago', status: 'Running', performance: '97.1%', health: 'issues' },
-    { name: 'MSCI Emerging Markets Index', time: '3 hours ago', status: 'Completed', performance: '99.8%', health: 'healthy' },
+    { id: 'iedge-apac-dividend', name: 'iEdge APAC Financials Dividend Plus Index', time: '2 hours ago', status: 'Running', performance: '98.5%', health: 'healthy' },
+    { id: 'sgx-asia-50', name: 'SGX S&P Asia 50 Index', time: '5 hours ago', status: 'Completed', performance: '99.2%', health: 'healthy' },
+    { id: 'sgx-china-a50', name: 'SGX FTSE China A50 Index', time: '7 hours ago', status: 'Running', performance: '97.1%', health: 'issues' },
+    { id: 'msci-em', name: 'MSCI Emerging Markets Index', time: '3 hours ago', status: 'Completed', performance: '99.8%', health: 'healthy' },
   ];
 
     const metricData: MetricCardProps[] = [

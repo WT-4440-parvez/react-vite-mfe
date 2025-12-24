@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Button, Card, Input, Modal, Table, Tabs } from './components';
+import { HeroButton as Button, Card, Input, Modal, Table, Tabs } from './components';
 import { sampleUsers } from './data/tableData';
 import './App.css';
-import { Chip, Button as HeroButton } from '@heroui/react';
+import { Chip } from '@heroui/react';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,24 +37,24 @@ function App() {
               <div className="component-showcase">
                 <div>
                   <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
-                    Native Variants
+                    Radius Variants
                   </strong>
-                  <div className="variants-display">
-                    <Button variant="primary">Primary</Button>
-                    <Button variant="secondary">Secondary</Button>
-                    <Button variant="success">Success</Button>
-                    <Button variant="danger">Danger</Button>
-                    <Button variant="primary">Primary</Button>
+                  <div className="variants-display mb-4">
+                    <Button color="primary" radius='none'>Primary</Button>
+                    <Button color="secondary" radius='sm'>Secondary</Button>
+                    <Button color="success" radius='md'>Success</Button>
+                    <Button color="danger" radius='lg'>Danger</Button>
+                    <Button color="primary" radius='full'>Primary</Button>
                   </div>
 
-                   <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
+                  <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
                     Native Variants
                   </strong>
-                  <div className="variants-display">
-                    <HeroButton color="primary">Hero Button</HeroButton>
-                    <HeroButton color="secondary">Hero Button</HeroButton>
-                    <HeroButton color="success">Hero Button</HeroButton>
-                    <HeroButton color="danger">Hero Button</HeroButton>
+                  <div className="variants-display mb-4">
+                    <Button color="primary">Hero Button</Button>
+                    <Button color="secondary">Hero Button</Button>
+                    <Button color="success">Hero Button</Button>
+                    <Button color="danger">Hero Button</Button>
                   </div>
 
                   <strong style={{ display: 'block', marginBottom: '12px', color: '#555' }}>
@@ -77,9 +77,9 @@ function App() {
                     Sizes
                   </strong>
                   <div className="size-display">
-                    <Button variant="primary" size="small">Small</Button>
-                    <Button variant="primary" size="medium">Medium</Button>
-                    <Button variant="primary" size="large">Large</Button>
+                    <Button color="primary" size="sm">Small</Button>
+                    <Button color="primary" size="md">Medium</Button>
+                    <Button color="primary" size="lg">Large</Button>
                   </div>
                 </div>
 
@@ -90,9 +90,9 @@ function App() {
                     States
                   </strong>
                   <div className="variants-display">
-                    <Button variant="primary" loading>Loading...</Button>
-                    <Button variant="secondary" disabled>Disabled</Button>
-                    <Button variant="success" fullWidth>Full Width Button</Button>
+                    <Button color="primary" isLoading>Loading...</Button>
+                    <Button color="secondary" disabled>Disabled</Button>
+                    <Button color="success" fullWidth>Full Width Button</Button>
                   </div>
                 </div>
               </div>
@@ -126,8 +126,8 @@ function App() {
                   hoverable
                   footer={
                     <div style={{ display: 'flex', gap: '12px' }}>
-                      <Button variant="primary" size="small">Action</Button>
-                      <Button variant="secondary" size="small">Cancel</Button>
+                      <Button color="primary" size="sm">Action</Button>
+                      <Button color="secondary" size="sm">Cancel</Button>
                     </div>
                   }
                 >
@@ -211,13 +211,13 @@ function App() {
                     Modal Sizes
                   </strong>
                   <div className="modal-demo-section">
-                    <Button variant="primary" onClick={() => setIsSmallModal(true)}>
+                    <Button color="primary" onClick={() => setIsSmallModal(true)}>
                       Small Modal
                     </Button>
-                    <Button variant="primary" onClick={() => setIsModalOpen(true)}>
+                    <Button color="primary" onClick={() => setIsModalOpen(true)}>
                       Medium Modal
                     </Button>
-                    <Button variant="primary" onClick={() => setIsLargeModal(true)}>
+                    <Button color="primary" onClick={() => setIsLargeModal(true)}>
                       Large Modal
                     </Button>
                   </div>
@@ -324,7 +324,7 @@ function App() {
         title="Small Modal"
         size="small"
         footer={
-          <Button variant="primary" onClick={() => setIsSmallModal(false)}>
+          <Button color="primary" onClick={() => setIsSmallModal(false)}>
             Close
           </Button>
         }
@@ -339,10 +339,10 @@ function App() {
         size="medium"
         footer={
           <>
-            <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+            <Button color="secondary" onClick={() => setIsModalOpen(false)}>
               Cancel
             </Button>
-            <Button variant="primary" onClick={() => setIsModalOpen(false)}>
+            <Button color="primary" onClick={() => setIsModalOpen(false)}>
               Confirm
             </Button>
           </>
@@ -367,10 +367,10 @@ function App() {
         size="large"
         footer={
           <>
-            <Button variant="secondary" onClick={() => setIsLargeModal(false)}>
+            <Button color="secondary" onClick={() => setIsLargeModal(false)}>
               Cancel
             </Button>
-            <Button variant="success" onClick={() => setIsLargeModal(false)}>
+            <Button color="success" onClick={() => setIsLargeModal(false)}>
               Submit Form
             </Button>
           </>

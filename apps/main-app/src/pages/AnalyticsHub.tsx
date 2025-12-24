@@ -2,7 +2,6 @@ import React from 'react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from '../types';
 import { Card } from 'utilityApp/Card';
-import HeroButton from 'utilityApp/HeroButton';
 
 const Analytics: React.FC = () => {
   const activities: Activity[] = [
@@ -17,12 +16,6 @@ const Analytics: React.FC = () => {
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-900">Analytics</h1>
         <p className="text-gray-600 mt-1">Comprehensive index analytics and insights</p>
-        <div className="mt-4">
-          <HeroButton color='primary'>Try Hero Button</HeroButton>
-          <HeroButton color='secondary'>Try Hero Button</HeroButton>
-          <HeroButton color='warning'>Try Hero Button</HeroButton>
-          <HeroButton color='danger'>Try Hero Button</HeroButton>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">

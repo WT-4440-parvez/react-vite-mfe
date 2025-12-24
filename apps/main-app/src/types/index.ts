@@ -6,6 +6,7 @@ export interface MenuItem {
 }
 
 export interface IndexItem {
+  id: string;
   name: string;
   time: string;
   status: 'Running' | 'Completed';
