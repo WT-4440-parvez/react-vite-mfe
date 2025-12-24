@@ -1,5 +1,6 @@
 import React from 'react';
 import { IndexItem } from '../../types';
+import IndexCard from './IndexCard';
 
 interface ActiveIndicesProps {
   indices: IndexItem[];
@@ -25,28 +26,37 @@ const ActiveIndices: React.FC<ActiveIndicesProps> = ({ indices }) => {
         </div>
       </div>
 
-      <div className="space-y-4">
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {indices.map((index, i) => (
-          <div key={i} className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-1">
-                <h3 className="font-medium text-gray-900">{index.name}</h3>
-                <div className={`w-2 h-2 rounded-full ${index.health === 'healthy' ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              </div>
-              <p className="text-sm text-gray-500">Last run {index.time}</p>
-            </div>
-            <div className="text-right">
-              <div className="text-lg font-semibold text-gray-900">{index.performance}</div>
-              <div className="text-xs text-gray-500">Performance</div>
-            </div>
-            <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-              index.status === 'Running' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-            }`}>
-              {index.status}
-            </span>
-          </div>
+          // <div key={i} className="group relative p-6 border border-gray-200 rounded-xl hover:border-sgx-100">
+          //   <div className="flex-1">
+          //     <div className="flex items-center gap-3 mb-1">
+          //       <h3 className="font-medium text-gray-900">{index.name}</h3>
+          //       <div className={`w-2 h-2 rounded-full ${index.health === 'healthy' ? 'bg-green-500' : 'bg-red-500'}`}></div>
+          //     </div>
+          //     <p className="text-sm text-gray-500">Last run {index.time}</p>
+          //   </div>
+          //   <div className="text-right">
+          //     <div className="text-lg font-semibold text-gray-900">{index.performance}</div>
+          //     <div className="text-xs text-gray-500">Performance</div>
+          //   </div>
+          //   <Button color={`${index.status === 'Running' ? 'success' : 'primary'}`}>
+          //     {index.status}
+          //   </Button>
+          // </div>
+          <IndexCard
+            key={i}
+            name={index.name}
+            time={index.time}
+            health={index.health}
+            status={index.status}
+            performance={index.performance}
+            onHistoryClick={() => console.log(`Viewing history for ${index.name}`)}
+          />
         ))}
       </div>
+      
     </div>
   );
 };
