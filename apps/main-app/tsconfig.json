@@ -6,6 +6,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "utility-app/*": ["../../apps/utility-app/src/components/*"]
+  ,"shared/*": ["../../shared/src/*"]
     }
   },
   "include": ["src"],

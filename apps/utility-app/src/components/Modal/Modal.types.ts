@@ -1,11 +1,3 @@
-import { ReactNode } from 'react';
-
-export interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title?: string;
-  children: ReactNode;
-  footer?: ReactNode;
-  size?: 'small' | 'medium' | 'large';
-  closeOnOverlayClick?: boolean;
-}
+export type {
+  ModalProps
+} from '../../../../shared/src/shared-types';

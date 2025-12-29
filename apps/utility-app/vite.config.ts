@@ -19,6 +19,7 @@ export default defineConfig({
         './Modal': './src/components/Modal/Modal.tsx',
         './Table': './src/components/Table/Table.tsx',
         './Tabs': './src/components/Tabs/Tabs.tsx',
+        './CustomTabs': './src/components/CustomTabs/CustomTabs.tsx',
         './HeroButton': './src/components/HeroButton/HeroButton.tsx',
       },
       shared: ['react', 'react-dom'],

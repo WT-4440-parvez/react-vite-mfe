@@ -3,6 +3,7 @@ import { LayoutGrid } from 'lucide-react';
 import MetricCard from '../components/Dashboard/MetricCard';
 import ActiveIndices from '../components/Dashboard/ActiveIndices';
 import { IndexItem, MetricCardProps } from '../types';
+import CustomTabsDemo from '../components/Demo/CustomTabsDemo';
 
 const Dashboard: React.FC = () => {
   const indices: IndexItem[] = [
@@ -73,6 +74,7 @@ const Dashboard: React.FC = () => {
         </div>
 
       <ActiveIndices indices={indices} />
+      <CustomTabsDemo />
     </div>
   );
 };

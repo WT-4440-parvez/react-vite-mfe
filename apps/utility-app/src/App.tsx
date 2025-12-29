@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HeroButton as Button, Card, Input, Modal, Table, Tabs } from './components';
+import { HeroButton as Button, Card, Input, Modal, Table, Tabs, CustomTabs } from './components';
 import { sampleUsers } from './data/tableData';
 import './App.css';
 import { Chip } from '@heroui/react';
@@ -11,6 +11,7 @@ function App() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('john.doe@example.com');
   const [password, setPassword] = useState('');
+  const [selected, setSelected] = useState("photos");
 
   return (
     <div className="app">
@@ -314,6 +315,32 @@ function App() {
               ]}
             />
           </div>
+        </Card>
+        <Card>
+          <CustomTabs
+            tabs={[
+              { key: "photos", title: "Photos" },
+              { key: "music", title: "Music" },
+              { key: "videos", title: "Videos" }
+            ]}
+            selectedKey={selected}
+            onSelectionChange={setSelected}
+          >
+            {/* Tab 1 content */}
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+
+            {/* Tab 2 content */}
+            <div>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco...
+            </div>
+
+            {/* Tab 3 content */}
+            <div>
+              Excepteur sint occaecat cupidatat non proident...
+            </div>
+          </CustomTabs>
         </Card>
       </div>
 
